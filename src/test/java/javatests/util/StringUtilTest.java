@@ -1,9 +1,10 @@
 package javatests.util;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;
 
 class StringUtilTest {
     @Test
@@ -28,5 +29,16 @@ class StringUtilTest {
         });
 
         assertEquals("A negative number of times is not allowed", exception.getMessage());
+    }
+
+    @Test
+    public void should_validate_that_string_is_not_empty() {
+        assertFalse(StringUtil.isEmpty("sanders"));
+    }
+
+    @ParameterizedTest
+    @ValueSource(strings = {"", " ", "\t", "\n", "\r"})
+    public void should_validate_that_string_is_empty(String str) {
+        assertTrue(StringUtil.isEmpty(str));
     }
 }
