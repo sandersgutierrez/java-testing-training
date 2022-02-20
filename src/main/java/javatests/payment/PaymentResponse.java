@@ -1,4 +1,4 @@
-package javatests.payments;
+package javatests.payment;
 
 public class PaymentResponse {
 

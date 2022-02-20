@@ -1,6 +1,6 @@
-package javatests.payments.impl;
+package javatests.payment.impl;
 
-import javatests.payments.*;
+import javatests.payment.*;
 
 public class PaymentProcessorImpl implements PaymentProcessor {
     private PaymentGateway paymentGateway;

@@ -1,6 +1,6 @@
-package javatests.payments;
+package javatests.payment;
 
-import javatests.payments.impl.PaymentProcessorImpl;
+import javatests.payment.impl.PaymentProcessorImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
